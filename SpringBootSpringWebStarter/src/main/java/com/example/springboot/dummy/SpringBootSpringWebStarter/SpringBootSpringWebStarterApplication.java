@@ -15,6 +15,7 @@ public class SpringBootSpringWebStarterApplication {
 		SpringApplication.run(SpringBootSpringWebStarterApplication.class, args);
 	}
 
+	// curl localhost:8080/
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
