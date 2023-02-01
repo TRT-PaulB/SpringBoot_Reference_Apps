@@ -18,8 +18,29 @@ For webapp basic revision:
 https://spring.io/guides/gs/spring-boot/
 
 --------------------------
-Restart the ssh-agent:
+Aliases
 
-eval "$(ssh-agent -s)"
+java2023 
+ssh
+
+--------------------------
+Remake github SSH key:
+
+1) Generate the key
+   ssh-keygen -t rsa -b 4096 -C "[email]"
+
+2) Restart the ssh-agent if necessary:
+   eval "$(ssh-agent -s)"
+
+3) Add the newly generated private key to config file:
+   - update config
+   - ssh-add ~/.ssh/[private key]
+
+4) Add the public SSH key into github
+
+DAILY ON MACBOOK:
+
+ssh-agent -s
+ssh-add ~/.ssh/github-TRT
 
 --------------------------
