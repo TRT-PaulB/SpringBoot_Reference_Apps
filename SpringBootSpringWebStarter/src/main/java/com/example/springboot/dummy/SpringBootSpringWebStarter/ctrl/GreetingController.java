@@ -1,6 +1,5 @@
 package com.example.springboot.dummy.SpringBootSpringWebStarter.ctrl;
 import com.example.springboot.dummy.SpringBootSpringWebStarter.service.Greeter;
-import com.example.springboot.dummy.SpringBootSpringWebStarter.service.GreetingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class GreetingController {
     @Qualifier("greetingJoker")
     private Greeter greetingJaker;
 
-    private Logger logger = LoggerFactory.getLogger(GreetingController.class);
+    private static final Logger logger = LoggerFactory.getLogger(GreetingController.class);
 
     @GetMapping(value = "/initial/{type}/ref/{id}")
     public ResponseEntity<?> getGreeting(@PathVariable("type") String classification, @PathVariable int id) {
